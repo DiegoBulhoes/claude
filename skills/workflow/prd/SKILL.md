@@ -351,9 +351,9 @@ Discover skills and agents dynamically at runtime. Common pairings:
 
 | Category | Skill | When to assign to an agent |
 |----------|-------|---------------------------|
-| **IaC** | `/terraform` | Terraform code generation, provider config, resource authoring |
-| **IaC** | `/terraform-module` | Creating new reusable Terraform modules |
+| **IaC** | `/terraform` | Terraform code generation, module creation, provider config, resource authoring |
 | **IaC** | `/terragrunt` | Terragrunt stack/unit configuration |
+| **IaC** | `/ansible` | Ansible playbook, role creation, and Molecule testing |
 | **IaC** | `/iac-review` | Security audit and validation of generated IaC |
 | **Kubernetes** | `/kubernetes` | K8s manifest generation, security hardening |
 | **Kubernetes** | `/helm` | Helm chart creation and values authoring |

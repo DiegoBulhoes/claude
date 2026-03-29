@@ -7,9 +7,8 @@ Shareable, cloud-agnostic Claude Code skills and agents for Infrastructure as Co
 ```
 skills/                          # Organized by category
   iac/                           # Infrastructure as Code
-    terraform/                   # Terraform/OpenTofu code generation
+    terraform/                   # Terraform/OpenTofu code generation and module creation
     terragrunt/                  # Terragrunt patterns and practices
-    terraform-module/            # Terraform module creation
     ansible/                     # Ansible roles, playbooks, and Molecule testing
     iac-review/                  # IaC review and security audit
   kubernetes/                    # Kubernetes ecosystem
