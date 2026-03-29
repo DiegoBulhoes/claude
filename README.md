@@ -11,6 +11,7 @@ Reusable, cloud-agnostic skills and agents for [Claude Code](https://docs.anthro
 | `terraform` | `/terraform` | Terraform/OpenTofu code generation with registry integration |
 | `terragrunt` | `/terragrunt` | Terragrunt patterns: catalogs, stacks, live repos, state management |
 | `terraform-module` | `/terraform-module` | Terraform module creation and best practices |
+| `ansible` | `/ansible` | Ansible playbook, role creation with Molecule testing setup and CI integration |
 | `iac-review` | `/iac-review` | IaC review and security audit for Terraform, Kustomize, Helm, K8s |
 
 ### Kubernetes & GitOps

@@ -10,6 +10,7 @@ skills/                          # Organized by category
     terraform/                   # Terraform/OpenTofu code generation
     terragrunt/                  # Terragrunt patterns and practices
     terraform-module/            # Terraform module creation
+    ansible/                     # Ansible roles, playbooks, and Molecule testing
     iac-review/                  # IaC review and security audit
   kubernetes/                    # Kubernetes ecosystem
     kubernetes/                  # K8s manifest generation and hardening
