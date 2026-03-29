@@ -1,7 +1,7 @@
 ---
 name: ansible-expert
 description: "Use this agent for all Ansible-related tasks: writing or reviewing playbooks, roles, and inventory; debugging execution errors; dynamic inventory with OCI plugin; secrets management; collection dependencies; idempotency issues; and integration with the Terraform-provisioned OCI infrastructure. This agent knows the project's ansible/ structure (WARP gateway roles, OCI dynamic inventory by tags) and conventions (FQCN, no_log, handler chains)."
-model: sonnet
+model: claude-opus-4-6
 color: green
 ---
 
