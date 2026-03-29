@@ -27,17 +27,35 @@ Reusable, cloud-agnostic skills and agents for [Claude Code](https://docs.anthro
 | Skill | Invoke | Description |
 |-------|--------|-------------|
 | `explore` | `/explore` | Repository structure mapping and dependency analysis |
-| `plan` | `/plan` | Implementation planning with structured todo and impact analysis |
 | `audit` | `/audit` | Convention compliance auditing for modules and components |
 | `technical-docs` | `/technical-docs` | Technical documentation with dark-mode Mermaid diagrams |
+| `prd` | `/prd` | Product-focused PRD — interactive interview that produces PRD with features, milestones, team roles, and acceptance criteria |
+| `tech-spec` | `/tech-spec` | Technical deep-dive — architecture, data model, NFRs, security, cost estimates, rollout plan. Uses PRD as input |
 
 ## Agents
 
 | Agent | Description |
 |-------|-------------|
+| `spec-writer` | Conducts structured interviews (one question at a time) to produce PRDs and Tech Specs. Orchestrates the PRD → Tech Spec pipeline. Uses `/prd` and `/tech-spec` skills |
 | `terraform-expert` | Senior IaC specialist for Terraform/Terragrunt debugging, module design, state management |
+| `ansible-expert` | Ansible specialist for playbooks, roles, inventory, and configuration management |
 | `cloud-troubleshooter` | Cloud infrastructure diagnosis: networking, IAM, quotas, state locks |
-| `repo-explorer` | Repository navigation: find files, trace dependencies, understand structure |
+
+## Spec Writer Workflow
+
+The `spec-writer` agent produces documentation in two phases:
+
+```
+Phase 1: PRD Interview → PRD (what & why)
+              ↓
+Phase 2: Tech Spec Interview → Tech Spec (how, at what cost, what can go wrong)
+```
+
+**PRD** (product-focused): Context, Team & Roles, Proposed Solution, Features (table), Acceptance Criteria, Milestones (table), Dependencies, Risks, Architecture Overview, Decision Log.
+
+**Tech Spec** (technical): Architecture, Technical Decisions, Requirements (WHEN/THEN), Data Model, Security, Infrastructure, Observability, Cost Estimate, Rollout Plan, Decision Log.
+
+The PRD's Team & Roles section maps human roles to Claude agents, enabling automated agent team composition in the Tech Spec.
 
 ## Installation
 
@@ -47,8 +65,10 @@ Reusable, cloud-agnostic skills and agents for [Claude Code](https://docs.anthro
 # Copy a skill to your project
 cp -r skills/iac/terraform/ <your-project>/.claude/skills/terraform/
 
-# Copy an agent
-cp agents/terraform-expert.md <your-project>/.claude/agents/
+# Copy the spec-writer agent + both skills it needs
+cp agents/spec-writer.md <your-project>/.claude/agents/
+cp -r skills/workflow/prd/ <your-project>/.claude/skills/prd/
+cp -r skills/workflow/tech-spec/ <your-project>/.claude/skills/tech-spec/
 ```
 
 ### Option 2: Git submodule
@@ -62,7 +82,7 @@ git submodule add <repo-url> .claude-skills
 
 ```bash
 ln -s /path/to/claude-skills/skills/iac/terraform .claude/skills/terraform
-ln -s /path/to/claude-skills/agents/terraform-expert.md .claude/agents/terraform-expert.md
+ln -s /path/to/claude-skills/agents/spec-writer.md .claude/agents/spec-writer.md
 ```
 
 > **Note:** The category directories (`iac/`, `kubernetes/`, `workflow/`) are organizational only. When installing, skills should land in `.claude/skills/<skill-name>/` (flattened).

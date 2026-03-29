@@ -18,13 +18,15 @@ skills/                          # Organized by category
     gitops/                      # GitOps workflows (ArgoCD/FluxCD)
   workflow/                      # Development workflows
     explore/                     # Repository structure mapping
-    plan/                        # Implementation planning
     audit/                       # Convention compliance auditing
     technical-docs/              # Technical documentation
+    prd/                         # Product-focused PRD with interview flow
+    tech-spec/                   # Technical deep-dive (uses PRD as input)
 agents/                          # Reusable agent definitions
+  spec-writer.md                 # PRD + Tech Spec interviewer and generator
   terraform-expert.md            # IaC specialist
+  ansible-expert.md              # Ansible specialist
   cloud-troubleshooter.md        # Cloud infrastructure diagnosis
-  repo-explorer.md               # Repository navigation
 ```
 
 ## Conventions
@@ -52,5 +54,9 @@ Skills are copied individually into the consuming project's `.claude/skills/` di
 cp -r skills/iac/terraform/ <project>/.claude/skills/terraform/
 
 # Copy an agent
-cp agents/terraform-expert.md <project>/.claude/agents/
+cp agents/spec-writer.md <project>/.claude/agents/
+
+# Copy the spec-writer's skills (prd + tech-spec)
+cp -r skills/workflow/prd/ <project>/.claude/skills/prd/
+cp -r skills/workflow/tech-spec/ <project>/.claude/skills/tech-spec/
 ```
