@@ -1,7 +1,7 @@
 ---
 spec_number: "NNN"
 prd_ref: "NNN"
-status: rascunho
+summary: ""
 priority: alta|media|baixa
 created: YYYY-MM-DD
 updated: YYYY-MM-DD

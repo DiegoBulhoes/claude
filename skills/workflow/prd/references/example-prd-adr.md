@@ -1,6 +1,6 @@
 ---
 prd_number: "001"
-status: rascunho
+summary: "Add a Redis caching layer to reduce API latency and database load on the Kubernetes cluster"
 priority: alta
 effort: medium
 created: 2026-03-29

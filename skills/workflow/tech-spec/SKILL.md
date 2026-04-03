@@ -1,6 +1,6 @@
 ---
 name: tech-spec
-description: "Staff/Principal Engineer Tech Spec — conducts iterative technical interview (one question at a time), detects inconsistencies, explores trade-offs, and produces a complete Tech Spec document. Converses in user's language, outputs English documents."
+description: "Staff/Principal Engineer Tech Spec — conducts iterative technical interview (one question at a time), detects inconsistencies, explores trade-offs, and produces a complete Tech Spec document. User chooses language (EN/PT-BR/ES) for conversation and document."
 user-invocable: true
 allowed-tools:
   - Read
@@ -66,13 +66,18 @@ The Tech Spec's `prd_ref` frontmatter field links back to the source PRD. The PR
 
 ## Execution Flow
 
-### Step 0 — Language Detection
+### Step 0 — Language Selection
 
 **MANDATORY FIRST ACTION**: Before anything else, ask the user:
 
-> What language should we use for our conversation? (The generated document will always be in English)
+> Which language should we use? This applies to both our conversation and the generated document.
+>
+> 1. English
+> 2. Português (Brasil)
+> 3. Español
+> 4. Other (please specify)
 
-Wait for the response. All subsequent interaction happens in the user's chosen language. The final document is **always in English**.
+Wait for the response. If the user picks option 4, ask them to specify the language. All subsequent interaction **and the generated document** use the chosen language.
 
 ### Step 1 — Context Loading
 
@@ -213,7 +218,6 @@ Present a summary of findings and ask the user to confirm or adjust before proce
 
 1. **Write the document** to `docs/tech-specs/`
 2. **Regenerate INDEX.md** in the output directory
-3. **Update TODO.md** at the project root
 
 ### Step 7 — Review & Iterate
 
@@ -231,7 +235,8 @@ After saving:
 ```yaml
 ---
 spec_number: "NNN"
-status: rascunho
+prd_ref: "NNN"
+summary: ""
 priority: alta|media|baixa
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
@@ -242,13 +247,6 @@ issue: ""
 depends_on: []
 references: []
 ---
-```
-
-### Status Lifecycle
-
-```
-rascunho → aprovado → em_execucao → concluido
-                  ↘ cancelado
 ```
 
 ---
@@ -275,7 +273,7 @@ Full interview flow. Take time to understand the system deeply. Push back on vag
 - **DO NOT** generate the document until you have enough context — keep interviewing
 - **DO NOT** dump all questions at once — one question at a time, with context
 - **DO NOT** accept vague answers — "fast" is not a requirement, "p99 < 200ms" is
-- **DO NOT** write documents in any language other than English
+- **DO NOT** write documents in a language other than the one chosen by the user in Step 0
 - **DO NOT** skip the consistency check — contradictions must be flagged before generating
 - **DO NOT** over-engineer — if it's an internal tool for 5 users, say so and simplify
 - **DO NOT** under-engineer — if it handles money or PII, flag missing security/compliance

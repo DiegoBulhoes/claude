@@ -1,6 +1,6 @@
 ---
 prd_number: "NNN"
-status: rascunho
+summary: ""
 priority: alta|media|baixa
 effort: small|medium|large
 created: YYYY-MM-DD
