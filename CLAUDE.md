@@ -16,6 +16,8 @@ skills/                          # Organized by category
     helm/                        # Helm chart creation
     kustomize/                   # Kustomize overlay patterns
     gitops/                      # GitOps workflows (ArgoCD/FluxCD)
+  development/                   # Programming languages
+    golang/                      # Go code generation, style, testing, concurrency
   workflow/                      # Development workflows
     explore/                     # Repository structure mapping
     audit/                       # Convention compliance auditing
@@ -47,7 +49,7 @@ agents/                          # Reusable agent definitions
 
 ## Installing Skills in a Project
 
-Skills are copied individually into the consuming project's `.claude/skills/` directory. The category subdirectories (`iac/`, `kubernetes/`, `workflow/`) exist only for organization in this repository — skills should be flattened when installed:
+Skills are copied individually into the consuming project's `.claude/skills/` directory. The category subdirectories (`iac/`, `kubernetes/`, `development/`, `workflow/`) exist only for organization in this repository — skills should be flattened when installed:
 
 ```bash
 # Copy a skill

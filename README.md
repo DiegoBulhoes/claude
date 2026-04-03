@@ -1,6 +1,6 @@
 # Claude Code Skills & Agents
 
-Reusable, cloud-agnostic skills and agents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), covering Infrastructure as Code, Kubernetes, GitOps, and development workflows.
+Reusable, cloud-agnostic skills and agents for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), covering Infrastructure as Code, Kubernetes, GitOps, development workflows, and programming languages.
 
 ## Skills Catalog
 
@@ -12,6 +12,12 @@ Reusable, cloud-agnostic skills and agents for [Claude Code](https://docs.anthro
 | `terragrunt` | `/terragrunt` | Terragrunt patterns: catalogs, stacks, live repos, state management |
 | `ansible` | `/ansible` | Ansible playbook, role creation with Molecule testing setup and CI integration |
 | `iac-review` | `/iac-review` | IaC review and security audit for Terraform, Kustomize, Helm, K8s |
+
+### Development
+
+| Skill | Invoke | Description |
+|-------|--------|-------------|
+| `golang` | `/golang` | Go code generation, project layout, naming, style, error handling, testing, concurrency, performance, and security |
 
 ### Kubernetes & GitOps
 
@@ -92,6 +98,21 @@ ln -s /path/to/claude-skills/agents/spec-writer.md .claude/agents/spec-writer.md
 - Override cloud-specific patterns by editing skill `references/` files
 - Add project-specific context via `CLAUDE.md` in your project root
 - Combine skills with project-specific agents for maximum effectiveness
+
+## Inspirations & References
+
+Skills in this repository are informed by community best practices and established style guides:
+
+| Reference | Used in |
+|-----------|---------|
+| [Go Proverbs](https://go-proverbs.github.io/) | `/golang` -- Rob Pike's guiding principles, cultural foundation of Go |
+| [Uber Go Style Guide](https://github.com/uber-go/guide) | `/golang` -- Production-tested conventions from one of the largest Go codebases |
+| [samber/cc-skills-golang](https://github.com/samber/cc-skills-golang) | `/golang` -- Studied for structure, depth, and practical rule formulation |
+| [Effective Go](https://go.dev/doc/effective_go) | `/golang` -- Official Go team guidance |
+| [Go Code Review Comments](https://go.dev/wiki/CodeReviewComments) | `/golang` -- Community wiki of code review patterns |
+| [terraform-plugin-framework](https://developer.hashicorp.com/terraform/plugin/framework) | `/golang` -- Terraform provider development patterns |
+| [cloudflare/terraform-provider-cloudflare](https://github.com/cloudflare/terraform-provider-cloudflare) | `/golang` -- Reference provider: service-per-resource layout, schema patterns, test templates |
+| [Kubebuilder Book](https://book.kubebuilder.io/) | `/golang` -- Kubernetes operator development with controller-runtime |
 
 ## License
 
