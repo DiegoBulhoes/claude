@@ -18,6 +18,7 @@ Reusable, cloud-agnostic skills and agents for [Claude Code](https://docs.anthro
 | Skill | Invoke | Description |
 |-------|--------|-------------|
 | `golang` | `/golang` | Go code generation, project layout, naming, style, error handling, testing, concurrency, performance, and security |
+| `rust` | `/rust` | Rust code generation, project layout, naming, style, error handling, testing, and Dioxus web development |
 
 ### Kubernetes & GitOps
 
@@ -113,6 +114,10 @@ Skills in this repository are informed by community best practices and establish
 | [terraform-plugin-framework](https://developer.hashicorp.com/terraform/plugin/framework) | `/golang` -- Terraform provider development patterns |
 | [cloudflare/terraform-provider-cloudflare](https://github.com/cloudflare/terraform-provider-cloudflare) | `/golang` -- Reference provider: service-per-resource layout, schema patterns, test templates |
 | [Kubebuilder Book](https://book.kubebuilder.io/) | `/golang` -- Kubernetes operator development with controller-runtime |
+| [The Rust Programming Language](https://doc.rust-lang.org/stable/book/) | `/rust` -- Official "the book", language reference |
+| [Rust API Guidelines](https://rust-lang.github.io/api-guidelines/) | `/rust` -- Library team naming and interoperability conventions |
+| [Dioxus Documentation](https://dioxuslabs.com/learn/0.6/) | `/rust` -- Official Dioxus framework guide for web, desktop, and mobile |
+| [Rust By Example](https://doc.rust-lang.org/stable/rust-by-example/) | `/rust` -- Code-focused learning resource |
 
 ## License
 
