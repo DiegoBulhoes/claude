@@ -206,6 +206,7 @@ Present a summary of findings and ask the user to confirm or adjust before proce
 
 - [ ] **No leftover placeholders**: no `[placeholder]`, `[Description]`, or `...` remains
 - [ ] **Frontmatter complete**: all fields have values
+- [ ] **Contents (TOC) present at the top**: links to all 13 numbered sections, in order, as unnumbered preamble immediately after the header
 - [ ] **Architecture diagram present**: at least 1 Mermaid diagram
 - [ ] **NFRs quantified**: no vague requirements ("fast", "scalable") — all must have numbers
 - [ ] **Trade-offs documented**: every major decision has alternatives considered with rationale

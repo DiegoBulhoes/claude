@@ -19,6 +19,22 @@ references: []
 >
 > Based on: [PRD-NNN — Title](../prds/prd-NNN-slug.md)
 
+## Contents
+
+- [1. Context](#1-context)
+- [2. Objective](#2-objective)
+- [3. Architecture](#3-architecture)
+- [4. Technical Decisions](#4-technical-decisions)
+- [5. Requirements](#5-requirements)
+- [6. Data Model](#6-data-model)
+- [7. Security](#7-security)
+- [8. Infrastructure](#8-infrastructure)
+- [9. Observability](#9-observability)
+- [10. Cost Estimate](#10-cost-estimate)
+- [11. Rollout Plan](#11-rollout-plan)
+- [12. Future Considerations](#12-future-considerations)
+- [13. Decision Log](#13-decision-log)
+
 ## 1. Context
 
 ### Problem Statement

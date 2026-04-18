@@ -159,6 +159,8 @@ Present your assessment to the user and confirm before proceeding.
 
 - [ ] **No leftover placeholders**: no `[placeholder]`, `[Description]`, `[name]`, or `...` remains
 - [ ] **Frontmatter complete**: all fields have values (`""` or `[]` is OK for optional fields)
+- [ ] **Contents (TOC) present first**: links to all 11 numbered sections, in order, placed before the TL;DR
+- [ ] **TL;DR present after TOC**: 3–5 sentences covering problem (with a number), solution, target impact, and the most important scope boundary
 - [ ] **Problem has data**: problem statement includes specific numbers (tickets, hours, incidents, users affected)
 - [ ] **Features have rules + edge cases**: every feature has at least 1 business rule and 1 edge case
 - [ ] **Acceptance criteria measurable**: every criterion has baseline, target, and verification method
@@ -239,11 +241,13 @@ references: []
 
 ## Templates
 
-| Template | Sections |
-|----------|----------|
-| [prd-template.md](references/prd-template.md) | 11: Context, Team & Roles, Proposed Solution, Features, Acceptance Criteria, Milestones, Dependencies, Risks, References, Architecture Overview, Decision Log |
+| Template | Preamble | Sections |
+|----------|----------|----------|
+| [prd-template.md](references/prd-template.md) | Contents (TOC) + TL;DR | 11: Context, Team & Roles, Proposed Solution, Features, Acceptance Criteria, Milestones, Dependencies, Risks, References, Architecture Overview, Decision Log |
 
 One template for all effort levels. The PRD is product-focused — technical architecture, data models, config details, and WHEN/THEN scenarios belong in the Tech Spec.
+
+Every PRD opens with a **Contents** list linking to each numbered section, followed by a **TL;DR** (3–5 sentences: problem with a headline number, solution in one sentence, target impact, most important scope boundary). These are unnumbered preamble and do not shift the 1–11 section numbering.
 
 ### Example
 
